@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#"
+     xml:base="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:movieontology="http://www.movieontology.org/2010/01/movieontology.owl"
+     xmlns:movieontology1="http://www.movieontology.org/2009/10/01/movieontology.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology">
+        <owl:imports rdf:resource="http://www.movieontology.org/2009/11/09/movieontology.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasCastMember"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasComposer -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasComposer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasProductionStaffMember"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasCostumeDesigner -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasCostumeDesigner">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasCrewMember"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasCrewMember"/>
+        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/page/Film_Director"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasEditor -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasEditor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasProductionStaffMember"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasProducer -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasProducer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasProductionStaffMember"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isProducerOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasCastMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasCastMember">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isCastMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasCrewMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasCrewMember">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isCrewMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasOfflineRetailer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasOfflineRetailer">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isOfflineRetailerFor"/>
+        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Retailer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasOnlineRetailer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasOnlineRetailer">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isOnlineRetailerFor"/>
+        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Retailer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasPartInSerie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasPartInSerie">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isPartInSerie"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasProductionStaffMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasProductionStaffMember">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasCrewMember"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isProductionStaffMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasWriter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasWriter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#hasProductionStaffMember"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isWriterOf"/>
+        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isCastMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isCastMember"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isCrewMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isCrewMember"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isOfflineRetailerFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isOfflineRetailerFor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isOnlineRetailerFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isOnlineRetailerFor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isPartInSerie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isPartInSerie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isProducerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isProducerOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isProductionStaffMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isProductionStaffMember"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isWriterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#isWriterOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#budget -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#budget">
+        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#name">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#surname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#surname">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#wordwidegross -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#wordwidegross">
+        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Retailer"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Cast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Cast">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Crew -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Crew">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Offline_retailer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Offline_retailer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Retailer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Production_staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Production_staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Crew"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Retailer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Retailer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Serie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Serie"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/Norway_15 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/Norway_15">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Certification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/United_Kindom_15 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/United_Kindom_15">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Certification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Adam_Langston -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Adam_Langston">
+        <movieontology1:isComposerIn rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Alastair_Kirton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Alastair_Kirton"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Bui_Baldvinsson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Bui_Baldvinsson"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Cinema -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Cinema">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Offline_retailer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#DVD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#DVD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Offline_retailer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Daisy_Aitkens -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Daisy_Aitkens"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dead_Pixel_Production -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dead_Pixel_Production">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Production_Company"/>
+        <movieontology1:produced rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
+        <movieontology1:belongsToGenre rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Drama"/>
+        <movieontology1:belongsToGenre rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Sci-Fi"/>
+        <movieontology1:hasActress rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Daisy_Aitkens"/>
+        <movieontology1:hasActress rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Phoebe_Sparrow"/>
+        <movieontology1:hasColor rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Color"/>
+        <movieontology1:hasFilmLocation rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Iceland"/>
+        <movieontology1:hasFilmLocation rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#United_Kingdom"/>
+        <movieontology1:hasMaleActor rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Alastair_Kirton"/>
+        <movieontology1:hasMaleActor rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Simon_Dwyer-Thomas"/>
+        <movieontology1:hasProducer rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Bui_Baldvinsson"/>
+        <movieontology1:hasProducer rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Michelle_Parkyn"/>
+        <movieontology1:isCertifiedWith rdf:resource="http://purl.obolibrary.org/obo/Norway_15"/>
+        <movieontology1:isCertifiedWith rdf:resource="http://purl.obolibrary.org/obo/United_Kindom_15"/>
+        <movieontology1:isCertifiedWith rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Australia:MA15+"/>
+        <movieontology1:isTranslatedTo rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#English"/>
+        <hasOfflineRetailer rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#DVD"/>
+        <hasOnlineRetailer rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer"/>
+        <hasOnlineRetailer rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#RottenTomatoes.com_retailer"/>
+        <movieontology1:releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-01</movieontology1:releasedate>
+        <movieontology1:runtime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98</movieontology1:runtime>
+        <movieontology1:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dune Drifter</movieontology1:title>
+        <budget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200000</budget>
+        <wordwidegross rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000000</wordwidegross>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#English -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#English"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Justine_Arbuthnot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Justine_Arbuthnot">
+        <movieontology1:isCostumeDesignerIn rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Marc_Price -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Marc_Price">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Writer"/>
+        <rdf:type rdf:resource="http://dbpedia.org/page/Film_Director"/>
+        <movieontology1:isDirectorOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter"/>
+        <movieontology1:isEditorIn rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter"/>
+        <isWriterOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Michelle_Parkyn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Michelle_Parkyn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Phoebe_Sparrow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Phoebe_Sparrow"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Simon_Dwyer-Thomas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Simon_Dwyer-Thomas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Australia:MA15+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Australia:MA15+">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Certification"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
