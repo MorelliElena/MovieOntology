@@ -311,6 +311,36 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/Argentina_16 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/Argentina_16"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/Brazil_16 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/Brazil_16"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/Canada_13 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/Canada_13"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/Germany_16 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/Germany_16"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/Italy_14 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/Italy_14"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/Norway_15 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/Norway_15">
@@ -341,9 +371,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Andrew_Gunn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Andrew_Gunn"/>
+    
+
+
     <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Bui_Baldvinsson -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Bui_Baldvinsson"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Caren_Pistorius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Caren_Pistorius"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Carl_Ellsworth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Carl_Ellsworth"/>
     
 
 
@@ -369,12 +417,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#David_Buckley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#David_Buckley"/>
+    
+
+
     <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dead_Pixel_Production -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dead_Pixel_Production">
         <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Production_Company"/>
         <movieontology1:produced rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Denise_Wingate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Denise_Wingate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Derrick_Borte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Derrick_Borte"/>
     
 
 
@@ -400,6 +466,7 @@
         <hasOfflineRetailer rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#DVD"/>
         <hasOnlineRetailer rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer"/>
         <hasOnlineRetailer rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#RottenTomatoes.com_retailer"/>
+        <movieontology1:imdbrating rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.3</movieontology1:imdbrating>
         <movieontology1:releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-01</movieontology1:releasedate>
         <movieontology1:runtime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98</movieontology1:runtime>
         <movieontology1:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dune Drifter</movieontology1:title>
@@ -415,11 +482,29 @@
     
 
 
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Gabriel_Bateman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Gabriel_Bateman"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Jimmi_Simpson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Jimmi_Simpson"/>
+    
+
+
     <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Justine_Arbuthnot -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Justine_Arbuthnot">
         <movieontology1:isCostumeDesignerIn rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Dune_Drifter"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Lisa_Ellzy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Lisa_Ellzy"/>
     
 
 
@@ -435,6 +520,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Mark_Gill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Mark_Gill"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Michael_McCusker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Michael_McCusker"/>
+    
+
+
     <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Michelle_Parkyn -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Michelle_Parkyn"/>
@@ -447,9 +544,51 @@
     
 
 
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Russel_Crow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Russel_Crow"/>
+    
+
+
     <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Simon_Dwyer-Thomas -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Simon_Dwyer-Thomas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Steve_Mirkovich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Steve_Mirkovich"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Tim_Mirkovich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Tim_Mirkovich"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Unhinged -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Unhinged">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
+        <movieontology1:belongsToGenre rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Action"/>
+        <movieontology1:belongsToGenre rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Thriller"/>
+        <movieontology1:hasActress rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Caren_Pistorius"/>
+        <movieontology1:hasDirector rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Derrick_Borte"/>
+        <movieontology1:hasFilmLocation rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#USA"/>
+        <movieontology1:hasMaleActor rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Gabriel_Bateman"/>
+        <movieontology1:hasMaleActor rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Jimmi_Simpson"/>
+        <movieontology1:hasMaleActor rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Russel_Crow"/>
+        <movieontology1:isCertifiedWith rdf:resource="http://purl.obolibrary.org/obo/Argentina_16"/>
+        <movieontology1:isCertifiedWith rdf:resource="http://purl.obolibrary.org/obo/Italy_14"/>
+        <movieontology1:isCertifiedWith rdf:resource="http://purl.obolibrary.org/obo/United_Kindom_15"/>
+        <movieontology1:isCertifiedWith rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Australia:MA15+"/>
+        <movieontology1:isTranslatedTo rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#English"/>
+        <movieontology1:nominatedFor rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Primetime_Emmy_Award"/>
+        <hasOfflineRetailer rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Cinema"/>
+        <hasWriter rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie-ontology#Carl_Ellsworth"/>
+    </owl:NamedIndividual>
     
 
 
