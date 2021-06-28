@@ -1,0 +1,48 @@
+Movie(?m) ^ worldwidegross(?m, ?g) ^ budget (?m,?b)^swrlb:subtract(?g,?b,?r) -> movieEarn(?m,?r)
+
+PREFIX m: <http://www.movieontology.org/2009/11/09/>
+PREFIX mo: <http://www.movieontology.org/2009/10/01/movieontology.owl#>
+PREFIX me: <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#>
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
+
+
+SELECT ?retailer (COUNT(?movie) as ?movies)
+WHERE {
+	?retailer rdf:type mo:Online_retailer.
+	?movie me:hasDistributor ?retailer.
+}
+GROUP BY ?retailer
+ORDER BY ASC (?movies)
+
+SELECT ?movie ?gross
+WHERE {
+	?movie rdf:type m:Movie.
+	?movie mo:belongsToGenre ?genre.
+	FILTER(?genre = mo:Animation).
+	?movie  mo:releasedate ?rdate.
+	BIND(year(xsd:date(?rdate)) as ?year).
+	FILTER(?year = "2020").
+	?movie me:worldwidegross ?gross.	
+	
+}
+ORDER BY ASC (?gross)
+
+SELECT ?movie (COUNT(?award) as ?awards)
+WHERE {
+	?movie rdf:type m:Movie.
+	?movie mo:isAwardedWith ?award.
+	?movie mo:hasFilmLocation ?location.
+	FILTER( ?location = mo:USA).
+}
+GROUP BY ?movie
+ORDER BY DESC (?awards)
+
+
+SELECT ?movie ?location ?budget
+WHERE {
+	?movie rdf:type m:Movie.
+	?movie me:budget ?budget.
+	?movie mo:hasFilmLocation ?location.
+	?location rdf:type mo:Europe	
+}
+ORDER BY ASC (?budget)
