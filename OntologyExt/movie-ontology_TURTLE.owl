@@ -73,6 +73,10 @@ movieontology:hasEditor rdfs:range <http://dbpedia.org/ontology/Person> ,
                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
 
 
+###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasFilmLocation
+movieontology:hasFilmLocation rdfs:range <http://dbpedia.org/ontology/Country> .
+
+
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasMaleActor
 movieontology:hasMaleActor rdfs:range <http://dbpedia.org/ontology/Actor> ,
                                       <http://dbpedia.org/ontology/Person> ,
@@ -143,6 +147,10 @@ movieontology:isEditorIn rdfs:domain <http://dbpedia.org/ontology/Person> ,
                                      :Crew ,
                                      :Post-production_Staff ,
                                      <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+
+
+###  http://www.movieontology.org/2009/10/01/movieontology.owl#isFilmLocationOf
+movieontology:isFilmLocationOf rdfs:domain <http://dbpedia.org/ontology/Country> .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#isSoundmixOf
@@ -349,397 +357,121 @@ movieontology1:isMaleActorIn rdfs:domain <http://dbpedia.org/ontology/Actor> ,
 #################################################################
 
 ###  http://dbpedia.org/ontology/Actor
-<http://dbpedia.org/ontology/Actor> rdfs:subClassOf :Cast ,
-                                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+<http://dbpedia.org/ontology/Actor> rdfs:subClassOf :Cast .
 
 
 ###  http://dbpedia.org/ontology/Musical_Artist
-<http://dbpedia.org/ontology/Musical_Artist> rdfs:subClassOf :Crew ,
-                                                             :Post-production_Staff ,
-                                                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+<http://dbpedia.org/ontology/Musical_Artist> rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://dbpedia.org/ontology/Writer
-<http://dbpedia.org/ontology/Writer> rdfs:subClassOf :Crew ,
-                                                     :Production_Staff ,
-                                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+<http://dbpedia.org/ontology/Writer> rdfs:subClassOf :Production_Staff .
 
 
 ###  http://dbpedia.org/page/Film_Director
-<http://dbpedia.org/page/Film_Director> rdfs:subClassOf :Crew ,
-                                                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Actionreach
-movieontology:Actionreach rdfs:subClassOf movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Australia_and_New_Zealand
-movieontology:Australia_and_New_Zealand rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Brute_Action
-movieontology:Brute_Action rdfs:subClassOf movieontology:Entertainment ,
-                                           movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Caribbean
-movieontology:Caribbean rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Central_America
-movieontology:Central_America rdfs:subClassOf movieontology:America ,
-                                              movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Central_Asia
-movieontology:Central_Asia rdfs:subClassOf movieontology:Territory .
+<http://dbpedia.org/page/Film_Director> rdfs:subClassOf :Crew .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Costume_Designer
-movieontology:Costume_Designer rdfs:subClassOf :Costume_Department_Staff ,
-                                               :Crew ,
-                                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Documentarial_Information
-movieontology:Documentarial_Information rdfs:subClassOf movieontology:Genre ,
-                                                        movieontology:Information .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Eastern_Africa
-movieontology:Eastern_Africa rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Eastern_Asia
-movieontology:Eastern_Asia rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Eastern_Europe
-movieontology:Eastern_Europe rdfs:subClassOf movieontology:Territory .
+movieontology:Costume_Designer rdfs:subClassOf :Costume_Department_Staff .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Editor
-movieontology:Editor rdfs:subClassOf :Crew ,
-                                     :Post-production_Staff ,
-                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Entertaining_Information
-movieontology:Entertaining_Information rdfs:subClassOf movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Experience
-movieontology:Experience rdfs:subClassOf movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Fast-Info
-movieontology:Fast-Info rdfs:subClassOf movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Fun
-movieontology:Fun rdfs:subClassOf movieontology:Entertainment ,
-                                  movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Heavy_Sensible
-movieontology:Heavy_Sensible rdfs:subClassOf movieontology:Entertainment ,
-                                             movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Historical_Information
-movieontology:Historical_Information rdfs:subClassOf movieontology:Genre ,
-                                                     movieontology:Information ,
-                                                     movieontology:Special-Info .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Imaginational_Entertainment
-movieontology:Imaginational_Entertainment rdfs:subClassOf movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Info-TV
-movieontology:Info-TV rdfs:subClassOf movieontology:Genre ,
-                                      movieontology:Information .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Intelectual_Entertainment
-movieontology:Intelectual_Entertainment rdfs:subClassOf movieontology:Entertainment ,
-                                                        movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Kids
-movieontology:Kids rdfs:subClassOf movieontology:Entertainment ,
-                                   movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#LatinAmerica
-movieontology:LatinAmerica rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Logical_Thrilling
-movieontology:Logical_Thrilling rdfs:subClassOf movieontology:Entertainment ,
-                                                movieontology:Genre ,
-                                                movieontology:Imaginational_Entertainment .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Love
-movieontology:Love rdfs:subClassOf movieontology:Entertainment ,
-                                   movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Melanesia
-movieontology:Melanesia rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Micronesia
-movieontology:Micronesia rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Middle_Africa
-movieontology:Middle_Africa rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Musical_Entertainment
-movieontology:Musical_Entertainment rdfs:subClassOf movieontology:Entertainment ,
-                                                    movieontology:Experience ,
-                                                    movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_Africa
-movieontology:Northern_Africa rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_America
-movieontology:Northern_America rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Northern_Europe
-movieontology:Northern_Europe rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Old_Action
-movieontology:Old_Action rdfs:subClassOf movieontology:Entertainment ,
-                                         movieontology:Genre .
+movieontology:Editor rdfs:subClassOf :Post-production_Staff .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer
 movieontology:Online_retailer rdfs:subClassOf :Distribution_Company .
 
 
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Polynesia
-movieontology:Polynesia rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Porn
-movieontology:Porn rdfs:subClassOf movieontology:Entertainment ,
-                                   movieontology:Genre .
-
-
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Producer
-movieontology:Producer rdfs:subClassOf :Crew ,
-                                       :Production_Staff ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#SciFi_and_Fantasy
-movieontology:SciFi_and_Fantasy rdfs:subClassOf movieontology:Entertainment ,
-                                                movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Sensible
-movieontology:Sensible rdfs:subClassOf movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Sensible_Thrilling
-movieontology:Sensible_Thrilling rdfs:subClassOf movieontology:Entertainment ,
-                                                 movieontology:Genre ,
-                                                 movieontology:Imaginational_Entertainment .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#SocialActive
-movieontology:SocialActive rdfs:subClassOf movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#South_America
-movieontology:South_America rdfs:subClassOf movieontology:America ,
-                                            movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Southeastern_Asia
-movieontology:Southeastern_Asia rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Southern_Africa
-movieontology:Southern_Africa rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Southern_Asia
-movieontology:Southern_Asia rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Southern_Europe
-movieontology:Southern_Europe rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Special-Info
-movieontology:Special-Info rdfs:subClassOf movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#TV-Entertainment
-movieontology:TV-Entertainment rdfs:subClassOf movieontology:Entertainment ,
-                                               movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Thrilling
-movieontology:Thrilling rdfs:subClassOf movieontology:Entertainment ,
-                                        movieontology:Genre .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Africa
-movieontology:Western_Africa rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Asia
-movieontology:Western_Asia rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Europe
-movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
+movieontology:Producer rdfs:subClassOf :Production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Accounting_Staff
 :Accounting_Staff rdf:type owl:Class ;
-                  rdfs:subClassOf :Crew ,
-                                  :Production_Office_Staff ,
-                                  :Production_Staff ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                  rdfs:subClassOf :Production_Office_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Additional_Orchestration
 :Additional_Orchestration rdf:type owl:Class ;
-                          rdfs:subClassOf :Crew ,
-                                          :Post-production_Staff ,
-                                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+                          rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Art_Department_Staff
 :Art_Department_Staff rdf:type owl:Class ;
-                      rdfs:subClassOf :Crew ,
-                                      <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                      rdfs:subClassOf :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Art_Director
 :Art_Director rdf:type owl:Class ;
-              rdfs:subClassOf :Art_Department_Staff ,
-                              :Art_Staff ,
-                              :Crew ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+              rdfs:subClassOf :Art_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Art_Staff
 :Art_Staff rdf:type owl:Class ;
-           rdfs:subClassOf :Art_Department_Staff ,
-                           :Crew ,
-                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+           rdfs:subClassOf :Art_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Assistant_Art_Director
 :Assistant_Art_Director rdf:type owl:Class ;
-                        rdfs:subClassOf :Art_Department_Staff ,
-                                        :Art_Director ,
-                                        :Art_Staff ,
-                                        :Crew ,
-                                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                        rdfs:subClassOf :Art_Director .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Assistant_Director_Staff
 :Assistant_Director_Staff rdf:type owl:Class ;
-                          rdfs:subClassOf :Crew ,
-                                          :Production_Managements_Staff ,
-                                          :Production_Office_Staff ,
-                                          :Production_Staff ,
-                                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                          rdfs:subClassOf :Production_Managements_Staff ,
+                                          :Production_Office_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Assistant_Location_Manager
 :Assistant_Location_Manager rdf:type owl:Class ;
-                            rdfs:subClassOf :Crew ,
-                                            :Location_Staff ,
-                                            :Production_Staff ,
-                                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                            rdfs:subClassOf :Location_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Assistant_Production_Manager
 :Assistant_Production_Manager rdf:type owl:Class ;
-                              rdfs:subClassOf :Crew ,
-                                              :Production_Managements_Staff ,
-                                              :Production_Office_Staff ,
-                                              :Production_Staff ,
-                                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                              rdfs:subClassOf :Production_Managements_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Best_Boy_Grip
 :Best_Boy_Grip rdf:type owl:Class ;
-               rdfs:subClassOf :Best_Boy_Lights ,
-                               :Crew ,
-                               :Lights_Staff ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Lights_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Best_Boy_Lights
 :Best_Boy_Lights rdf:type owl:Class ;
-                 rdfs:subClassOf :Crew ,
-                                 :Lights_Staff ,
-                                 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                                 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                 rdfs:subClassOf :Lights_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Boom_Operator
 :Boom_Operator rdf:type owl:Class ;
-               rdfs:subClassOf :Crew ,
-                               :Sound_Production_Staff ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Sound_Production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Breakdown_Artist
 :Breakdown_Artist rdf:type owl:Class ;
-                  rdfs:subClassOf :Costume_Department_Staff ,
-                                  :Crew ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                  rdfs:subClassOf :Costume_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Buyer
 :Buyer rdf:type owl:Class ;
-       rdfs:subClassOf :Art_Department_Staff ,
-                       :Crew ,
-                       :Set_Staff ,
-                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+       rdfs:subClassOf :Set_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera_Operator
 :Camera_Operator rdf:type owl:Class ;
-                 rdfs:subClassOf :Camera_Staff ,
-                                 :Crew ,
-                                 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                                 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                 rdfs:subClassOf :Camera_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera_Production_Assistant
 :Camera_Production_Assistant rdf:type owl:Class ;
-                             rdfs:subClassOf :Camera_Staff ,
-                                             :Crew ,
-                                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                             rdfs:subClassOf :Camera_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera_Staff
 :Camera_Staff rdf:type owl:Class ;
-              rdfs:subClassOf :Crew ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+              rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast
@@ -749,106 +481,72 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Casting_Director
 :Casting_Director rdf:type owl:Class ;
-                  rdfs:subClassOf :Casting_Staff ,
-                                  :Crew ,
-                                  :Production_Staff ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                  rdfs:subClassOf :Casting_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Casting_PA
 :Casting_PA rdf:type owl:Class ;
-            rdfs:subClassOf :Casting_Staff ,
-                            :Crew ,
-                            :Production_Staff ,
-                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+            rdfs:subClassOf :Casting_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Casting_Staff
 :Casting_Staff rdf:type owl:Class ;
-               rdfs:subClassOf :Crew ,
-                               :Production_Staff ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Colorist
 :Colorist rdf:type owl:Class ;
-          rdfs:subClassOf :Crew ,
-                          :Editorial_Staff ,
-                          :Post-production_Staff ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+          rdfs:subClassOf :Editorial_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Composer
 :Composer rdf:type owl:Class ;
-          rdfs:subClassOf :Crew ,
-                          :Post-production_Staff ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+          rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Compostor
 :Compostor rdf:type owl:Class ;
-           rdfs:subClassOf :Crew ,
-                           :Post-production_Staff ,
-                           :Visual_Effects_Staff ,
-                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+           rdfs:subClassOf :Visual_Effects_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Conductor
 :Conductor rdf:type owl:Class ;
-           rdfs:subClassOf :Crew ,
-                           :Post-production_Staff ,
-                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+           rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Construction_Coordinator
 :Construction_Coordinator rdf:type owl:Class ;
-                          rdfs:subClassOf :Art_Department_Staff ,
-                                          :Construction_Staff ,
-                                          :Crew ,
-                                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                          rdfs:subClassOf :Construction_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Construction_Staff
 :Construction_Staff rdf:type owl:Class ;
-                    rdfs:subClassOf :Art_Department_Staff ,
-                                    :Crew ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                    rdfs:subClassOf :Art_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Continuity_Staff
 :Continuity_Staff rdf:type owl:Class ;
-                  rdfs:subClassOf :Crew ,
-                                  :Production_Staff ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                  rdfs:subClassOf :Production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Costume_Buyer
 :Costume_Buyer rdf:type owl:Class ;
-               rdfs:subClassOf :Costume_Department_Staff ,
-                               :Crew ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Costume_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Costume_Department_Staff
 :Costume_Department_Staff rdf:type owl:Class ;
-                          rdfs:subClassOf :Crew ,
-                                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                          rdfs:subClassOf :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Costume_Standby
 :Costume_Standby rdf:type owl:Class ;
-                 rdfs:subClassOf :Costume_Department_Staff ,
-                                 :Crew ,
-                                 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                 rdfs:subClassOf :Costume_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Costume_Supervisor
 :Costume_Supervisor rdf:type owl:Class ;
-                    rdfs:subClassOf :Costume_Department_Staff ,
-                                    :Crew ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                    rdfs:subClassOf :Costume_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew
@@ -858,32 +556,22 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cutter
 :Cutter rdf:type owl:Class ;
-        rdfs:subClassOf :Costume_Department_Staff ,
-                        :Crew ,
-                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+        rdfs:subClassOf :Costume_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Dialogue_Editor
 :Dialogue_Editor rdf:type owl:Class ;
-                 rdfs:subClassOf :Crew ,
-                                 :Post-production_Staff ,
-                                 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+                 rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Digital_Imaging_Technician
 :Digital_Imaging_Technician rdf:type owl:Class ;
-                            rdfs:subClassOf :Camera_Staff ,
-                                            :Crew ,
-                                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                            rdfs:subClassOf :Camera_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Digital_Service_Staff
 :Digital_Service_Staff rdf:type owl:Class ;
-                       rdfs:subClassOf :Crew ,
-                                       :Production_Staff ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                       rdfs:subClassOf :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Distribution_Company
@@ -892,116 +580,72 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Dolly_grip
 :Dolly_grip rdf:type owl:Class ;
-            rdfs:subClassOf :Crew ,
-                            :Grip_Staff ,
-                            :Lights_Staff ,
-                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+            rdfs:subClassOf :Grip_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Editorial_Staff
 :Editorial_Staff rdf:type owl:Class ;
-                 rdfs:subClassOf :Crew ,
-                                 :Post-production_Staff ,
-                                 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                 rdfs:subClassOf :Post-production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Executive_Producer
 :Executive_Producer rdf:type owl:Class ;
-                    rdfs:subClassOf :Crew ,
-                                    :Production_Staff ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                    rdfs:subClassOf :Production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Film_Loader
 :Film_Loader rdf:type owl:Class ;
-             rdfs:subClassOf :Camera_Staff ,
-                             :Crew ,
-                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+             rdfs:subClassOf :Camera_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#First_Assistant_Camera
 :First_Assistant_Camera rdf:type owl:Class ;
-                        rdfs:subClassOf :Camera_Staff ,
-                                        :Crew ,
-                                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                        rdfs:subClassOf :Camera_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#First_Assistant_Director
 :First_Assistant_Director rdf:type owl:Class ;
-                          rdfs:subClassOf :Assistant_Director_Staff ,
-                                          :Crew ,
-                                          :Production_Managements_Staff ,
-                                          :Production_Office_Staff ,
-                                          :Production_Staff ,
-                                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                          rdfs:subClassOf :Assistant_Director_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Foley_Artist
 :Foley_Artist rdf:type owl:Class ;
-              rdfs:subClassOf :Crew ,
-                              :Post-production_Staff ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+              rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Gaffer
 :Gaffer rdf:type owl:Class ;
-        rdfs:subClassOf :Crew ,
-                        :Lights_Staff ,
-                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+        rdfs:subClassOf :Lights_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Graphic_Artist
 :Graphic_Artist rdf:type owl:Class ;
-                rdfs:subClassOf :Art_Department_Staff ,
-                                :Art_Director ,
-                                :Art_Staff ,
-                                :Crew ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                rdfs:subClassOf :Art_Director .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Greens_Man
 :Greens_Man rdf:type owl:Class ;
-            rdfs:subClassOf :Art_Department_Staff ,
-                            :Crew ,
-                            :Set_Staff ,
-                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+            rdfs:subClassOf :Set_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Grip_Staff
 :Grip_Staff rdf:type owl:Class ;
-            rdfs:subClassOf :Crew ,
-                            :Lights_Staff ,
-                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+            rdfs:subClassOf :Lights_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair_Staylist
 :Hair_Staylist rdf:type owl:Class ;
-               rdfs:subClassOf :Costume_Department_Staff ,
-                               :Crew ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
+               rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Head_Carpenter
 :Head_Carpenter rdf:type owl:Class ;
-                rdfs:subClassOf :Art_Department_Staff ,
-                                :Construction_Staff ,
-                                :Crew ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                rdfs:subClassOf :Construction_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Head_Plastering_Department
 :Head_Plastering_Department rdf:type owl:Class ;
-                            rdfs:subClassOf :Art_Department_Staff ,
-                                            :Crew ,
-                                            :Scenic_Staff ,
-                                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                            rdfs:subClassOf :Scenic_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Home_Video
@@ -1011,11 +655,7 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Illustrator
 :Illustrator rdf:type owl:Class ;
-             rdfs:subClassOf :Art_Department_Staff ,
-                             :Art_Director ,
-                             :Art_Staff ,
-                             :Crew ,
-                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+             rdfs:subClassOf :Art_Director .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#International
@@ -1023,201 +663,124 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
                rdfs:subClassOf :Distribution_Company .
 
 
-###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Key_Costumer
-:Key_Costumer rdf:type owl:Class ;
-              rdfs:subClassOf :Costume_Department_Staff ,
-                              :Crew ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Key_Hair
 :Key_Hair rdf:type owl:Class ;
-          rdfs:subClassOf :Costume_Department_Staff ,
-                          :Crew ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
+          rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Key_Makeup_Artist
 :Key_Makeup_Artist rdf:type owl:Class ;
-                   rdfs:subClassOf :Costume_Department_Staff ,
-                                   :Crew ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
+                   rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Key_Scenic
 :Key_Scenic rdf:type owl:Class ;
-            rdfs:subClassOf :Art_Department_Staff ,
-                            :Crew ,
-                            :Scenic_Staff ,
-                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+            rdfs:subClassOf :Scenic_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Key_grip
 :Key_grip rdf:type owl:Class ;
-          rdfs:subClassOf :Crew ,
-                          :Grip_Staff ,
-                          :Lights_Staff ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+          rdfs:subClassOf :Grip_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Lead_Man
 :Lead_Man rdf:type owl:Class ;
-          rdfs:subClassOf :Art_Department_Staff ,
-                          :Crew ,
-                          :Set_Staff ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+          rdfs:subClassOf :Set_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Legal_Counsel
 :Legal_Counsel rdf:type owl:Class ;
-               rdfs:subClassOf :Crew ,
-                               :Digital_Service_Staff ,
-                               :Production_Staff ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Digital_Service_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Lights_Staff
 :Lights_Staff rdf:type owl:Class ;
-              rdfs:subClassOf :Crew ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+              rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Line_Producer
 :Line_Producer rdf:type owl:Class ;
-               rdfs:subClassOf :Crew ,
-                               :Production_Office_Staff ,
-                               :Production_Staff ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Production_Office_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Location_Assistant
 :Location_Assistant rdf:type owl:Class ;
-                    rdfs:subClassOf :Crew ,
-                                    :Location_Staff ,
-                                    :Production_Staff ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                    rdfs:subClassOf :Location_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Location_Manager
 :Location_Manager rdf:type owl:Class ;
-                  rdfs:subClassOf :Crew ,
-                                  :Location_Staff ,
-                                  :Production_Staff ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                  rdfs:subClassOf :Location_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Location_Production_Assistant
 :Location_Production_Assistant rdf:type owl:Class ;
-                               rdfs:subClassOf :Crew ,
-                                               :Location_Staff ,
-                                               :Production_Staff ,
-                                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                               rdfs:subClassOf :Location_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Location_Scout
 :Location_Scout rdf:type owl:Class ;
-                rdfs:subClassOf :Crew ,
-                                :Location_Staff ,
-                                :Production_Staff ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                rdfs:subClassOf :Location_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Location_Staff
 :Location_Staff rdf:type owl:Class ;
-                rdfs:subClassOf :Crew ,
-                                :Production_Staff ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                rdfs:subClassOf :Production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Makeup_Artist
 :Makeup_Artist rdf:type owl:Class ;
-               rdfs:subClassOf :Costume_Department_Staff ,
-                               :Crew ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
+               rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Makeup_Supervisor
 :Makeup_Supervisor rdf:type owl:Class ;
-                   rdfs:subClassOf :Costume_Department_Staff ,
-                                   :Crew ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
+                   rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Matte_Painter
 :Matte_Painter rdf:type owl:Class ;
-               rdfs:subClassOf :Crew ,
-                               :Post-production_Staff ,
-                               :Visual_Effects_Staff ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Visual_Effects_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Motion_Control_Technitian
 :Motion_Control_Technitian rdf:type owl:Class ;
-                           rdfs:subClassOf :Camera_Staff ,
-                                           :Crew ,
-                                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                           rdfs:subClassOf :Camera_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Music_Editor
 :Music_Editor rdf:type owl:Class ;
-              rdfs:subClassOf :Crew ,
-                              :Post-production_Staff ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+              rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Music_Preparation
 :Music_Preparation rdf:type owl:Class ;
-                   rdfs:subClassOf :Crew ,
-                                   :Post-production_Staff ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+                   rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Music_Supervisor
 :Music_Supervisor rdf:type owl:Class ;
-                  rdfs:subClassOf :Crew ,
-                                  :Post-production_Staff ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+                  rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Native_Cutter
 :Native_Cutter rdf:type owl:Class ;
-               rdfs:subClassOf :Crew ,
-                               :Editorial_Staff ,
-                               :Post-production_Staff ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Editorial_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Other_Assitant
 :Other_Assitant rdf:type owl:Class ;
-                rdfs:subClassOf :Assistant_Director_Staff ,
-                                :Crew ,
-                                :Production_Managements_Staff ,
-                                :Production_Office_Staff ,
-                                :Production_Staff ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                rdfs:subClassOf :Assistant_Director_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Post-production_Staff
 :Post-production_Staff rdf:type owl:Class ;
-                       rdfs:subClassOf :Crew ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                       rdfs:subClassOf :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Post-production_Supervisor
 :Post-production_Supervisor rdf:type owl:Class ;
-                            rdfs:subClassOf :Crew ,
-                                            :Post-production_Staff ,
-                                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                            rdfs:subClassOf :Post-production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Prequel
@@ -1227,103 +790,67 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Accountant
 :Production_Accountant rdf:type owl:Class ;
-                       rdfs:subClassOf :Accounting_Staff ,
-                                       :Crew ,
-                                       :Production_Office_Staff ,
-                                       :Production_Staff ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                       rdfs:subClassOf :Production_Office_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Assistant
 :Production_Assistant rdf:type owl:Class ;
-                      rdfs:subClassOf :Crew ,
-                                      :Production_Office_Staff ,
-                                      :Production_Staff ,
-                                      <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                      rdfs:subClassOf :Production_Office_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Coordinator
 :Production_Coordinator rdf:type owl:Class ;
-                        rdfs:subClassOf :Crew ,
-                                        :Production_Managements_Staff ,
-                                        :Production_Office_Staff ,
-                                        :Production_Staff ,
-                                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                        rdfs:subClassOf :Production_Managements_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Designer
 :Production_Designer rdf:type owl:Class ;
-                     rdfs:subClassOf :Art_Department_Staff ,
-                                     :Crew ,
-                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                     rdfs:subClassOf :Art_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Managements_Staff
 :Production_Managements_Staff rdf:type owl:Class ;
-                              rdfs:subClassOf :Crew ,
-                                              :Production_Office_Staff ,
-                                              :Production_Staff ,
-                                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                              rdfs:subClassOf :Production_Office_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Manager
 :Production_Manager rdf:type owl:Class ;
-                    rdfs:subClassOf :Crew ,
-                                    :Production_Managements_Staff ,
-                                    :Production_Office_Staff ,
-                                    :Production_Staff ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                    rdfs:subClassOf :Production_Managements_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Office_Staff
 :Production_Office_Staff rdf:type owl:Class ;
-                         rdfs:subClassOf :Crew ,
-                                         :Production_Staff ,
-                                         <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                         rdfs:subClassOf :Production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Sound_Mixer
 :Production_Sound_Mixer rdf:type owl:Class ;
-                        rdfs:subClassOf :Crew ,
-                                        :Sound_Production_Staff ,
-                                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                        rdfs:subClassOf :Sound_Production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Staff
 :Production_Staff rdf:type owl:Class ;
-                  rdfs:subClassOf :Crew ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                  rdfs:subClassOf :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Prop_Maker
 :Prop_Maker rdf:type owl:Class ;
-            rdfs:subClassOf :Art_Department_Staff ,
-                            :Construction_Staff ,
-                            :Crew ,
-                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+            rdfs:subClassOf :Construction_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Prop_Master
 :Prop_Master rdf:type owl:Class ;
-             rdfs:subClassOf :Art_Department_Staff ,
-                             :Crew ,
-                             :Property_Staff ,
-                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+             rdfs:subClassOf :Property_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Property_Staff
 :Property_Staff rdf:type owl:Class ;
-                rdfs:subClassOf :Art_Department_Staff ,
-                                :Crew ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                rdfs:subClassOf :Art_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Re-recording_Mixer
 :Re-recording_Mixer rdf:type owl:Class ;
-                    rdfs:subClassOf :Crew ,
-                                    :Post-production_Staff ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+                    rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Role
@@ -1332,66 +859,42 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Rotoscope_Artists
 :Rotoscope_Artists rdf:type owl:Class ;
-                   rdfs:subClassOf :Crew ,
-                                   :Post-production_Staff ,
-                                   :Visual_Effects_Staff ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                   rdfs:subClassOf :Visual_Effects_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Scenic_Staff
 :Scenic_Staff rdf:type owl:Class ;
-              rdfs:subClassOf :Art_Department_Staff ,
-                              :Crew ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+              rdfs:subClassOf :Art_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Score_Recorder
 :Score_Recorder rdf:type owl:Class ;
-                rdfs:subClassOf :Crew ,
-                                :Post-production_Staff ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+                rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Script_Supervisor
 :Script_Supervisor rdf:type owl:Class ;
-                   rdfs:subClassOf :Continuity_Staff ,
-                                   :Crew ,
-                                   :Production_Staff ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                   rdfs:subClassOf :Continuity_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Seat_Dresser
 :Seat_Dresser rdf:type owl:Class ;
-              rdfs:subClassOf :Art_Department_Staff ,
-                              :Crew ,
-                              :Set_Staff ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+              rdfs:subClassOf :Set_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Second_Assistant_Camera
 :Second_Assistant_Camera rdf:type owl:Class ;
-                         rdfs:subClassOf :Camera_Staff ,
-                                         :Crew ,
-                                         <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                                         <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                         rdfs:subClassOf :Camera_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Second_Assistant_Director
 :Second_Assistant_Director rdf:type owl:Class ;
-                           rdfs:subClassOf :Assistant_Director_Staff ,
-                                           :Crew ,
-                                           :Production_Managements_Staff ,
-                                           :Production_Office_Staff ,
-                                           :Production_Staff ,
-                                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                           rdfs:subClassOf :Assistant_Director_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Second_Assistant_Sound
 :Second_Assistant_Sound rdf:type owl:Class ;
-                        rdfs:subClassOf :Crew ,
-                                        :Sound_Production_Staff ,
-                                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                        rdfs:subClassOf :Sound_Production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sequel
@@ -1405,130 +908,87 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Set_Decorator
 :Set_Decorator rdf:type owl:Class ;
-               rdfs:subClassOf :Art_Department_Staff ,
-                               :Crew ,
-                               :Set_Staff ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Set_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Set_Designer
 :Set_Designer rdf:type owl:Class ;
-              rdfs:subClassOf :Art_Department_Staff ,
-                              :Art_Director ,
-                              :Art_Staff ,
-                              :Crew ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+              rdfs:subClassOf :Art_Director .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Set_Staff
 :Set_Staff rdf:type owl:Class ;
-           rdfs:subClassOf :Art_Department_Staff ,
-                           :Crew ,
-                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+           rdfs:subClassOf :Art_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Social_publicist
 :Social_publicist rdf:type owl:Class ;
-                  rdfs:subClassOf :Crew ,
-                                  :Digital_Service_Staff ,
-                                  :Production_Staff ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                  rdfs:subClassOf :Digital_Service_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound_Designer
 :Sound_Designer rdf:type owl:Class ;
-                rdfs:subClassOf :Crew ,
-                                :Post-production_Staff ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+                rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound_Editor
 :Sound_Editor rdf:type owl:Class ;
-              rdfs:subClassOf :Crew ,
-                              :Post-production_Staff ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
+              rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound_Production_Staff
 :Sound_Production_Staff rdf:type owl:Class ;
-                        rdfs:subClassOf :Crew ,
-                                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                        rdfs:subClassOf :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Special_Effect_Aassistant
 :Special_Effect_Aassistant rdf:type owl:Class ;
-                           rdfs:subClassOf :Crew ,
-                                           :Special_Effects_Staff ,
-                                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                           rdfs:subClassOf :Special_Effects_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Special_Effect_Supervisor
 :Special_Effect_Supervisor rdf:type owl:Class ;
-                           rdfs:subClassOf :Crew ,
-                                           :Special_Effects_Staff ,
-                                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                           rdfs:subClassOf :Special_Effects_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Special_Effects_Staff
 :Special_Effects_Staff rdf:type owl:Class ;
-                       rdfs:subClassOf :Crew ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                       rdfs:subClassOf :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Special_Makeup_Effects_Artist
 :Special_Makeup_Effects_Artist rdf:type owl:Class ;
-                               rdfs:subClassOf :Costume_Department_Staff ,
-                                               :Crew ,
-                                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
+                               rdfs:subClassOf <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Standby_Art_Director
 :Standby_Art_Director rdf:type owl:Class ;
-                      rdfs:subClassOf :Art_Department_Staff ,
-                                      :Art_Director ,
-                                      :Art_Staff ,
-                                      :Crew ,
-                                      <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                      rdfs:subClassOf :Art_Director .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Steadicam_Operator
 :Steadicam_Operator rdf:type owl:Class ;
-                    rdfs:subClassOf :Camera_Staff ,
-                                    :Crew ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                    rdfs:subClassOf :Camera_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Stunt_Coordinator
 :Stunt_Coordinator rdf:type owl:Class ;
-                   rdfs:subClassOf :Crew ,
-                                   :Stunt_Staff ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                   rdfs:subClassOf :Stunt_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Stunt_Staff
 :Stunt_Staff rdf:type owl:Class ;
-             rdfs:subClassOf :Crew ,
-                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+             rdfs:subClassOf :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#System_Administrator
 :System_Administrator rdf:type owl:Class ;
-                      rdfs:subClassOf :Crew ,
-                                      :Digital_Service_Staff ,
-                                      :Production_Staff ,
-                                      <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                      rdfs:subClassOf :Digital_Service_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Telecine_Colorist
 :Telecine_Colorist rdf:type owl:Class ;
-                   rdfs:subClassOf :Crew ,
-                                   :Editorial_Staff ,
-                                   :Post-production_Staff ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                   rdfs:subClassOf :Editorial_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Theatrical
@@ -1538,64 +998,42 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Unit_Manager
 :Unit_Manager rdf:type owl:Class ;
-              rdfs:subClassOf :Crew ,
-                              :Production_Managements_Staff ,
-                              :Production_Office_Staff ,
-                              :Production_Staff ,
-                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+              rdfs:subClassOf :Production_Managements_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Visual_Effects_Creative_Director
 :Visual_Effects_Creative_Director rdf:type owl:Class ;
-                                  rdfs:subClassOf :Crew ,
-                                                  :Post-production_Staff ,
-                                                  :Visual_Effects_Staff ,
-                                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                                  rdfs:subClassOf :Visual_Effects_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Visual_Effects_Editor
 :Visual_Effects_Editor rdf:type owl:Class ;
-                       rdfs:subClassOf :Crew ,
-                                       :Post-production_Staff ,
-                                       :Visual_Effects_Staff ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                       rdfs:subClassOf :Visual_Effects_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Visual_Effects_Producer
 :Visual_Effects_Producer rdf:type owl:Class ;
-                         rdfs:subClassOf :Crew ,
-                                         :Post-production_Staff ,
-                                         :Visual_Effects_Staff ,
-                                         <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                         rdfs:subClassOf :Visual_Effects_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Visual_Effects_Staff
 :Visual_Effects_Staff rdf:type owl:Class ;
-                      rdfs:subClassOf :Crew ,
-                                      :Post-production_Staff ,
-                                      <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                      rdfs:subClassOf :Post-production_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Visual_Effects_Supervisor
 :Visual_Effects_Supervisor rdf:type owl:Class ;
-                           rdfs:subClassOf :Crew ,
-                                           :Post-production_Staff ,
-                                           :Visual_Effects_Staff ,
-                                           <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                           rdfs:subClassOf :Visual_Effects_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Weapon_Master
 :Weapon_Master rdf:type owl:Class ;
-               rdfs:subClassOf :Art_Department_Staff ,
-                               :Crew ,
-                               :Property_Staff ,
-                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:subClassOf :Property_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff
 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Camera&Lights_Staff> rdf:type owl:Class ;
-                                                                                               rdfs:subClassOf :Crew ,
-                                                                                                               <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                                                                                               rdfs:subClassOf :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew
@@ -1604,16 +1042,12 @@ movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff
 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Hair&Makeup_Staff> rdf:type owl:Class ;
-                                                                                             rdfs:subClassOf :Costume_Department_Staff ,
-                                                                                                             :Crew ,
-                                                                                                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                                                                                             rdfs:subClassOf :Costume_Department_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff
 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> rdf:type owl:Class ;
-                                                                                             rdfs:subClassOf :Crew ,
-                                                                                                             :Post-production_Staff ,
-                                                                                                             <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                                                                                             rdfs:subClassOf :Post-production_Staff .
 
 
 #################################################################
