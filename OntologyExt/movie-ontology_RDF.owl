@@ -467,7 +467,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Assistant_Director_Staff">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Managements_Staff"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Office_Staff"/>
     </owl:Class>
     
 

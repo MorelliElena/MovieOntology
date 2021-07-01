@@ -286,8 +286,7 @@ movieontology:Producer rdfs:subClassOf :Production_Staff .
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Assistant_Director_Staff
 :Assistant_Director_Staff rdf:type owl:Class ;
-                          rdfs:subClassOf :Production_Managements_Staff ,
-                                          :Production_Office_Staff .
+                          rdfs:subClassOf :Production_Managements_Staff .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Assistant_Location_Manager
