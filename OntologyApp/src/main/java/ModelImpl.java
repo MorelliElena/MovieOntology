@@ -32,7 +32,7 @@ public class ModelImpl implements Observable<Record> {
     public ModelImpl() {
         FileManager.getInternal().addLocatorClassLoader(ModelImpl.class.getClassLoader());
         model = FileManager.getInternal().
-                loadModelInternal("movie-ontology_RDF_3.owl");
+                loadModelInternal("movie-ontology_RDF.owl");
         this.observerList = new ArrayList<>();
         this.recordList = new ArrayList<>();
         this.resultList = new ArrayList<>();
