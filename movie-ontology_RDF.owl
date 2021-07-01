@@ -47,14 +47,6 @@
     
 
 
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#enablesConsumptionOf -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#enablesConsumptionOf">
-        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Certification"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor">
@@ -69,9 +61,7 @@
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasActress -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasActress">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCastMember"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Actor"/>
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </rdf:Description>
@@ -133,7 +123,6 @@
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasMaleActor -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasMaleActor">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCastMember"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Actor"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
@@ -1032,14 +1021,6 @@
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Europe">
         <rdfs:subClassOf rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Territory"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/11/09/movieontology.owl#Consumable_Product -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/11/09/movieontology.owl#Consumable_Product">
-        <rdfs:subClassOf rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Certification"/>
     </rdf:Description>
     
 
@@ -2529,6 +2510,7 @@
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Distribution_Company"/>
     </rdf:Description>
     
@@ -2756,6 +2738,7 @@
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Blockbuster.com_retailer -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Blockbuster.com_retailer">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Distribution_Company"/>
     </rdf:Description>
     
@@ -4017,6 +4000,7 @@
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Netflix.com_retailer -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Netflix.com_retailer">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Distribution_Company"/>
     </rdf:Description>
     
@@ -4328,6 +4312,7 @@
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#RottenTomatoes.com_retailer -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#RottenTomatoes.com_retailer">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Distribution_Company"/>
     </rdf:Description>
     
@@ -4993,8 +4978,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#AppleTv.com_retailer">
         <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer"/>
-        <hasDistributor rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer"/>
-        <hasDistributor rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#AppleTv.com_retailer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Distribution_Company"/>
     </owl:NamedIndividual>
     
 
@@ -5248,6 +5232,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Disney+.com_retailer">
         <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Distribution_Company"/>
     </owl:NamedIndividual>
     
 
@@ -5262,6 +5247,31 @@
         <budget rdf:datatype="http://www.w3.org/2001/XMLSchema#double">9.0E7</budget>
         <worldwidegross rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.018E8</worldwidegross>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#AppleTv.com_retailer"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Disney+.com_retailer"/>
+        </owl:distinctMembers>
+    </rdf:Description>
     
 
 
@@ -5297,7 +5307,7 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -5314,13 +5324,42 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#isAwardedWith"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#worldwidegross"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#m"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#a"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#g"/>
                             </rdf:Description>
                         </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#budget"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#m"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#b"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
+                                                <swrl:arguments rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#r"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#g"/>
+                                                    <rdf:Description rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#b"/>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
                     </rdf:Description>
                 </rdf:rest>
             </rdf:Description>
@@ -5330,10 +5369,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#nominatedFor"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#movieEarn"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#m"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#r"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -5413,7 +5452,7 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -5430,42 +5469,13 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#worldwidegross"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#isAwardedWith"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#m"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#g"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#a"/>
                             </rdf:Description>
                         </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#budget"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#m"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#b"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
-                                                <swrl:arguments rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#r"/>
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#g"/>
-                                                    <rdf:Description rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#b"/>
-                                                </swrl:arguments>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                     </rdf:Description>
                 </rdf:rest>
             </rdf:Description>
@@ -5475,10 +5485,10 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#movieEarn"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#nominatedFor"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#m"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#r"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#a"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>

@@ -1,10 +1,15 @@
 @prefix : <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
 @prefix movieontology: <http://www.movieontology.org/2009/10/01/movieontology.owl#> .
+@prefix movieontology1: <http://www.movieontology.org/2009/11/09/movieontology.owl#> .
 @base <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology> .
 
 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology> rdf:type owl:Ontology ;
@@ -16,16 +21,12 @@
 #################################################################
 
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
-<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#enablesConsumptionOf
-movieontology:enablesConsumptionOf rdfs:domain movieontology:Certification .
-
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor
 movieontology:hasActor rdfs:subPropertyOf :hasCastMember ;
@@ -35,9 +36,7 @@ movieontology:hasActor rdfs:subPropertyOf :hasCastMember ;
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasActress
-movieontology:hasActress rdfs:subPropertyOf :hasCastMember ;
-                         rdfs:range <http://dbpedia.org/ontology/Actor> ,
-                                    <http://dbpedia.org/ontology/Person> ,
+movieontology:hasActress rdfs:range <http://dbpedia.org/ontology/Actor> ,
                                     :Cast ,
                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
 
@@ -75,8 +74,7 @@ movieontology:hasEditor rdfs:range <http://dbpedia.org/ontology/Person> ,
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasMaleActor
-movieontology:hasMaleActor rdfs:subPropertyOf :hasCastMember ;
-                           rdfs:range <http://dbpedia.org/ontology/Actor> ,
+movieontology:hasMaleActor rdfs:range <http://dbpedia.org/ontology/Actor> ,
                                       <http://dbpedia.org/ontology/Person> ,
                                       :Cast ,
                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
@@ -156,11 +154,11 @@ movieontology:isTranslatedTo rdfs:range movieontology:Presentation .
 
 
 ###  http://www.movieontology.org/2009/11/09/movieontology.owl#isMaleActorIn
-<http://www.movieontology.org/2009/11/09/movieontology.owl#isMaleActorIn> rdfs:domain <http://dbpedia.org/ontology/Actor> ,
-                                                                                      <http://dbpedia.org/ontology/Person> ,
-                                                                                      :Cast ,
-                                                                                      <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ;
-                                                                          rdfs:range <http://www.movieontology.org/2009/11/09/Movie> .
+movieontology1:isMaleActorIn rdfs:domain <http://dbpedia.org/ontology/Actor> ,
+                                         <http://dbpedia.org/ontology/Person> ,
+                                         :Cast ,
+                                         <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ;
+                             rdfs:range <http://www.movieontology.org/2009/11/09/Movie> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#containsMovie
@@ -608,10 +606,6 @@ movieontology:Western_Asia rdfs:subClassOf movieontology:Territory .
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Western_Europe
 movieontology:Western_Europe rdfs:subClassOf movieontology:Territory .
-
-
-###  http://www.movieontology.org/2009/11/09/movieontology.owl#Consumable_Product
-<http://www.movieontology.org/2009/11/09/movieontology.owl#Consumable_Product> rdfs:subClassOf movieontology:Certification .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Accounting_Staff
@@ -1664,7 +1658,8 @@ movieontology:Algeria rdf:type movieontology:Africa ,
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Amazon.com_retailer
-movieontology:Amazon.com_retailer rdf:type :Distribution_Company .
+movieontology:Amazon.com_retailer rdf:type movieontology:Online_retailer ,
+                                           :Distribution_Company .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#American_Samoa
@@ -1791,7 +1786,8 @@ movieontology:Black_and_White rdf:type movieontology:Presentation .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Blockbuster.com_retailer
-movieontology:Blockbuster.com_retailer rdf:type :Distribution_Company .
+movieontology:Blockbuster.com_retailer rdf:type movieontology:Online_retailer ,
+                                                :Distribution_Company .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Bolivia
@@ -2127,7 +2123,7 @@ movieontology:Gibraltar rdf:type movieontology:Europe ,
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Golden_Globe_Award
-movieontology:Golden_Globe_Award <http://www.movieontology.org/2009/11/09/movieontology.owl#isAwardOf> :Nomadland .
+movieontology:Golden_Globe_Award movieontology1:isAwardOf :Nomadland .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Greece
@@ -2504,7 +2500,8 @@ movieontology:Nepal rdf:type movieontology:Asia ,
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Netflix.com_retailer
-movieontology:Netflix.com_retailer rdf:type :Distribution_Company .
+movieontology:Netflix.com_retailer rdf:type movieontology:Online_retailer ,
+                                            :Distribution_Company .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Netherlands
@@ -2580,7 +2577,7 @@ movieontology:Oman rdf:type movieontology:Asia ,
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Oscar_Award
-movieontology:Oscar_Award <http://www.movieontology.org/2009/11/09/movieontology.owl#isAwardOf> :Nomadland .
+movieontology:Oscar_Award movieontology1:isAwardOf :Nomadland .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Pakistan
@@ -2679,7 +2676,8 @@ movieontology:Romania rdf:type movieontology:Europe ,
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#RottenTomatoes.com_retailer
-movieontology:RottenTomatoes.com_retailer rdf:type :Distribution_Company .
+movieontology:RottenTomatoes.com_retailer rdf:type movieontology:Online_retailer ,
+                                                   :Distribution_Company .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#Russia
@@ -3052,9 +3050,8 @@ movieontology:Zimbabwe rdf:type movieontology:Africa ,
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#AppleTv.com_retailer
 :AppleTv.com_retailer rdf:type owl:NamedIndividual ,
-                               movieontology:Online_retailer ;
-                      :hasDistributor movieontology:Amazon.com_retailer ,
-                                      :AppleTv.com_retailer .
+                               movieontology:Online_retailer ,
+                               :Distribution_Company .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Bloodshot
@@ -3244,7 +3241,8 @@ movieontology:Zimbabwe rdf:type movieontology:Africa ,
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Disney+.com_retailer
 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Disney+.com_retailer> rdf:type owl:NamedIndividual ,
-                                                                                                         movieontology:Online_retailer .
+                                                                                                         movieontology:Online_retailer ,
+                                                                                                         :Distribution_Company .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Harley_Quinn:_Birds_Of_Pray
@@ -3258,133 +3256,151 @@ movieontology:Zimbabwe rdf:type movieontology:Africa ,
 
 
 #################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( movieontology:Amazon.com_retailer
+                        :AppleTv.com_retailer
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( movieontology:Amazon.com_retailer
+                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Disney+.com_retailer>
+                      )
+] .
+
+
+#################################################################
 #    Rules
 #################################################################
 
-:m rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:m rdf:type swrl:Variable .
 
-:a rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:a rdf:type swrl:Variable .
 
-:g rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:g rdf:type swrl:Variable .
 
-:b rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:b rdf:type swrl:Variable .
 
-:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:r rdf:type swrl:Variable .
 
-:m1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:m1 rdf:type swrl:Variable .
 
-:r1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:r1 rdf:type swrl:Variable .
 
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S3"^^xsd:string ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.movieontology.org/2009/11/09/Movie> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :m
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> movieontology:isAwardedWith ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :a
-                                                                ] ;
-                                                      rdf:rest rdf:nil
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> movieontology:nominatedFor ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :m ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S2"^^xsd:string ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.movieontology.org/2009/11/09/Movie> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :m1
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> movieontology:imdbrating ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m1 ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :r1
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
-                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                                          rdf:first :r1 ;
-                                                                                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                     rdf:first 8.0 ;
-                                                                                                                                     rdf:rest rdf:nil
-                                                                                                                                   ]
-                                                                                                                        ]
-                                                                           ] ;
-                                                                 rdf:rest rdf:nil
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :ishighrating ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :m1 ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
    rdfs:comment ""^^xsd:string ;
    rdfs:label "S1"^^xsd:string ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.movieontology.org/2009/11/09/Movie> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :m
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :worldwidegross ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :g
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :budget ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :m ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> :b
-                                                                           ] ;
-                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#subtract> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#arguments> ( :r
-                                                                                                                                     :g
-                                                                                                                                     :b
-                                                                                                                                   )
-                                                                                      ] ;
-                                                                            rdf:rest rdf:nil
-                                                                          ]
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :movieEarn ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :m ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :r
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <http://www.movieontology.org/2009/11/09/Movie> ;
+                           swrl:argument1 :m
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate :worldwidegross ;
+                                      swrl:argument1 :m ;
+                                      swrl:argument2 :g
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate :budget ;
+                                                 swrl:argument1 :m ;
+                                                 swrl:argument2 :b
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                            swrl:builtin swrlb:subtract ;
+                                                            swrl:arguments ( :r
+                                                                             :g
+                                                                             :b
+                                                                           )
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate :movieEarn ;
+                           swrl:argument1 :m ;
+                           swrl:argument2 :r
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "S2"^^xsd:string ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <http://www.movieontology.org/2009/11/09/Movie> ;
+                           swrl:argument1 :m1
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate movieontology:imdbrating ;
+                                      swrl:argument1 :m1 ;
+                                      swrl:argument2 :r1
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:greaterThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first :r1 ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 8.0 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate :ishighrating ;
+                           swrl:argument1 :m1 ;
+                           swrl:argument2 "true"^^xsd:boolean
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "S3"^^xsd:string ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <http://www.movieontology.org/2009/11/09/Movie> ;
+                           swrl:argument1 :m
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate movieontology:isAwardedWith ;
+                                      swrl:argument1 :m ;
+                                      swrl:argument2 :a
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate movieontology:nominatedFor ;
+                           swrl:argument1 :m ;
+                           swrl:argument2 :a
+                         ] ;
+               rdf:rest rdf:nil
+             ]
  ] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
