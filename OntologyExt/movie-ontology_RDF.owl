@@ -51,9 +51,6 @@
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCastMember"/>
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </rdf:Description>
     
 
@@ -62,68 +59,6 @@
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasActress">
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Actor"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasColor -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasColor">
-        <rdfs:range rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Presentation"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasComposer -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasComposer">
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Post-production_Staff"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&amp;Music_Staff"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasCostumeDesigner -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasCostumeDesigner">
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Costume_Department_Staff"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector">
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasEditor -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasEditor">
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Post-production_Staff"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasFilmLocation -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasFilmLocation">
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Country"/>
     </rdf:Description>
     
 
@@ -132,28 +67,6 @@
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasMaleActor">
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Actor"/>
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasProducer -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasProducer">
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Staff"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasSoundmix -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasSoundmix">
-        <rdfs:range rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Presentation"/>
     </rdf:Description>
     
 
@@ -166,108 +79,11 @@
     
 
 
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isActorIn -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isActorIn">
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn">
         <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Actor"/>
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
         <rdfs:range rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isColorOf -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isColorOf">
-        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Presentation"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isComposerIn -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isComposerIn">
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Post-production_Staff"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&amp;Music_Staff"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isConsumableAs -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isConsumableAs">
-        <rdfs:range rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Certification"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isCostumeDesignerIn -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isCostumeDesignerIn">
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Costume_Department_Staff"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isDirectorOf -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isDirectorOf">
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isEditorIn -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isEditorIn">
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Post-production_Staff"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isFilmLocationOf -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isFilmLocationOf">
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Country"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isSoundmixOf -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isSoundmixOf">
-        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Presentation"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isTranslatedTo -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isTranslatedTo">
-        <rdfs:range rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Presentation"/>
     </rdf:Description>
     
 
@@ -276,9 +92,6 @@
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/11/09/movieontology.owl#isMaleActorIn">
         <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Actor"/>
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
         <rdfs:range rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
     </rdf:Description>
     
@@ -300,7 +113,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCrewMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 
@@ -311,7 +123,6 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#isCastMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 
@@ -322,7 +133,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCrewMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 
@@ -333,7 +143,6 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#isCrewMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 
@@ -354,7 +163,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCrewMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 
@@ -365,8 +173,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCrewMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Production_Staff"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 
@@ -376,9 +182,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasRole">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#isPlayedBy"/>
         <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Actor"/>
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Role"/>
     </owl:ObjectProperty>
     
@@ -390,7 +193,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCrewMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 
@@ -401,7 +203,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCrewMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 
@@ -411,7 +212,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasVisualEffectStaffMember">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCrewMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
@@ -421,7 +221,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#isCastMember">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
         <rdfs:range rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
     </owl:ObjectProperty>
     
@@ -431,7 +230,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#isCrewMember">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
         <rdfs:range rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
     </owl:ObjectProperty>
     
@@ -460,9 +258,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#isPlayedBy">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Role"/>
         <rdfs:range rdf:resource="http://dbpedia.org/ontology/Actor"/>
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 
@@ -473,7 +268,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCrewMember"/>
         <rdfs:domain rdf:resource="http://www.movieontology.org/2009/11/09/Movie"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Crew"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&amp;Crew"/>
     </owl:ObjectProperty>
     
 

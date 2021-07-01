@@ -29,143 +29,28 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasActor
-movieontology:hasActor rdfs:subPropertyOf :hasCastMember ;
-                       rdfs:range <http://dbpedia.org/ontology/Person> ,
-                                  :Cast ,
-                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+movieontology:hasActor rdfs:subPropertyOf :hasCastMember .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasActress
-movieontology:hasActress rdfs:range <http://dbpedia.org/ontology/Actor> ,
-                                    :Cast ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasColor
-movieontology:hasColor rdfs:range movieontology:Presentation .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasComposer
-movieontology:hasComposer rdfs:range <http://dbpedia.org/ontology/Person> ,
-                                     :Crew ,
-                                     :Post-production_Staff ,
-                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasCostumeDesigner
-movieontology:hasCostumeDesigner rdfs:range <http://dbpedia.org/ontology/Person> ,
-                                            :Costume_Department_Staff ,
-                                            :Crew ,
-                                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasDirector
-movieontology:hasDirector rdfs:range <http://dbpedia.org/ontology/Person> ,
-                                     :Crew ,
-                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasEditor
-movieontology:hasEditor rdfs:range <http://dbpedia.org/ontology/Person> ,
-                                   :Crew ,
-                                   :Post-production_Staff ,
-                                   <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasFilmLocation
-movieontology:hasFilmLocation rdfs:range <http://dbpedia.org/ontology/Country> .
+movieontology:hasActress rdfs:range <http://dbpedia.org/ontology/Actor> .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasMaleActor
-movieontology:hasMaleActor rdfs:range <http://dbpedia.org/ontology/Actor> ,
-                                      <http://dbpedia.org/ontology/Person> ,
-                                      :Cast ,
-                                      <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasProducer
-movieontology:hasProducer rdfs:range <http://dbpedia.org/ontology/Person> ,
-                                     :Crew ,
-                                     :Production_Staff ,
-                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasSoundmix
-movieontology:hasSoundmix rdfs:range movieontology:Presentation .
+movieontology:hasMaleActor rdfs:range <http://dbpedia.org/ontology/Actor> .
 
 
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasTranslatedMovie
 movieontology:hasTranslatedMovie rdfs:domain movieontology:Presentation .
 
 
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isActorIn
-movieontology:isActorIn rdfs:domain <http://dbpedia.org/ontology/Person> ,
-                                    :Cast ,
-                                    <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn
-movieontology:isActressIn rdfs:domain <http://dbpedia.org/ontology/Actor> ,
-                                      <http://dbpedia.org/ontology/Person> ,
-                                      :Cast ,
-                                      <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ;
+movieontology:isActressIn rdfs:domain <http://dbpedia.org/ontology/Actor> ;
                           rdfs:range <http://www.movieontology.org/2009/11/09/Movie> .
 
 
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isColorOf
-movieontology:isColorOf rdfs:domain movieontology:Presentation .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isComposerIn
-movieontology:isComposerIn rdfs:domain <http://dbpedia.org/ontology/Person> ,
-                                       :Crew ,
-                                       :Post-production_Staff ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Sound&Music_Staff> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isConsumableAs
-movieontology:isConsumableAs rdfs:range movieontology:Certification .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isCostumeDesignerIn
-movieontology:isCostumeDesignerIn rdfs:domain <http://dbpedia.org/ontology/Person> ,
-                                              :Costume_Department_Staff ,
-                                              :Crew ,
-                                              <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isDirectorOf
-movieontology:isDirectorOf rdfs:domain <http://dbpedia.org/ontology/Person> ,
-                                       :Crew ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isEditorIn
-movieontology:isEditorIn rdfs:domain <http://dbpedia.org/ontology/Person> ,
-                                     :Crew ,
-                                     :Post-production_Staff ,
-                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isFilmLocationOf
-movieontology:isFilmLocationOf rdfs:domain <http://dbpedia.org/ontology/Country> .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isSoundmixOf
-movieontology:isSoundmixOf rdfs:domain movieontology:Presentation .
-
-
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#isTranslatedTo
-movieontology:isTranslatedTo rdfs:range movieontology:Presentation .
-
-
 ###  http://www.movieontology.org/2009/11/09/movieontology.owl#isMaleActorIn
-movieontology1:isMaleActorIn rdfs:domain <http://dbpedia.org/ontology/Actor> ,
-                                         <http://dbpedia.org/ontology/Person> ,
-                                         :Cast ,
-                                         <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ;
+movieontology1:isMaleActorIn rdfs:domain <http://dbpedia.org/ontology/Actor> ;
                              rdfs:range <http://www.movieontology.org/2009/11/09/Movie> .
 
 
@@ -180,32 +65,28 @@ movieontology1:isMaleActorIn rdfs:domain <http://dbpedia.org/ontology/Actor> ,
 :hasArtDepartmentStaffMember rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf :hasCrewMember ;
                              rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-                             rdfs:range :Crew ,
-                                        <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                             rdfs:range :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCastMember
 :hasCastMember rdf:type owl:ObjectProperty ;
                owl:inverseOf :isCastMember ;
                rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-               rdfs:range :Cast ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:range :Cast .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCostumeDepartmentStaffMember
 :hasCostumeDepartmentStaffMember rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf :hasCrewMember ;
                                  rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-                                 rdfs:range :Crew ,
-                                            <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                                 rdfs:range :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCrewMember
 :hasCrewMember rdf:type owl:ObjectProperty ;
                owl:inverseOf :isCrewMember ;
                rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-               rdfs:range :Crew ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+               rdfs:range :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasDistributor
@@ -219,26 +100,20 @@ movieontology1:isMaleActorIn rdfs:domain <http://dbpedia.org/ontology/Actor> ,
 :hasPostProductionStaffMember rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf :hasCrewMember ;
                               rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-                              rdfs:range :Crew ,
-                                         <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                              rdfs:range :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasProductionStaffMember
 :hasProductionStaffMember rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :hasCrewMember ;
                           rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-                          rdfs:range :Crew ,
-                                     :Production_Staff ,
-                                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                          rdfs:range :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasRole
 :hasRole rdf:type owl:ObjectProperty ;
          owl:inverseOf :isPlayedBy ;
-         rdfs:domain <http://dbpedia.org/ontology/Actor> ,
-                     <http://dbpedia.org/ontology/Person> ,
-                     :Cast ,
-                     <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ;
+         rdfs:domain <http://dbpedia.org/ontology/Actor> ;
          rdfs:range :Role .
 
 
@@ -246,37 +121,32 @@ movieontology1:isMaleActorIn rdfs:domain <http://dbpedia.org/ontology/Actor> ,
 :hasSoundProductionStaffMember rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf :hasCrewMember ;
                                rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-                               rdfs:range :Crew ,
-                                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                               rdfs:range :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasStuntStaffMember
 :hasStuntStaffMember rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :hasCrewMember ;
                      rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-                     rdfs:range :Crew ,
-                                <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                     rdfs:range :Crew .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasVisualEffectStaffMember
 :hasVisualEffectStaffMember rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf :hasCrewMember ;
                             rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-                            rdfs:range :Crew ,
-                                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                            rdfs:range <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#isCastMember
 :isCastMember rdf:type owl:ObjectProperty ;
-              rdfs:domain :Cast ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ;
+              rdfs:domain :Cast ;
               rdfs:range <http://www.movieontology.org/2009/11/09/Movie> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#isCrewMember
 :isCrewMember rdf:type owl:ObjectProperty ;
-              rdfs:domain :Crew ,
-                          <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> ;
+              rdfs:domain :Crew ;
               rdfs:range <http://www.movieontology.org/2009/11/09/Movie> .
 
 
@@ -295,18 +165,14 @@ movieontology1:isMaleActorIn rdfs:domain <http://dbpedia.org/ontology/Actor> ,
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#isPlayedBy
 :isPlayedBy rdf:type owl:ObjectProperty ;
             rdfs:domain :Role ;
-            rdfs:range <http://dbpedia.org/ontology/Actor> ,
-                       <http://dbpedia.org/ontology/Person> ,
-                       :Cast ,
-                       <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+            rdfs:range <http://dbpedia.org/ontology/Actor> .
 
 
 ###  http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCamera&LightsStaffMember
 <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#hasCamera&LightsStaffMember> rdf:type owl:ObjectProperty ;
                                                                                                        rdfs:subPropertyOf :hasCrewMember ;
                                                                                                        rdfs:domain <http://www.movieontology.org/2009/11/09/Movie> ;
-                                                                                                       rdfs:range :Crew ,
-                                                                                                                  <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Cast&Crew> .
+                                                                                                       rdfs:range :Crew .
 
 
 #################################################################
