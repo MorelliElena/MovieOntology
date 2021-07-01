@@ -2,11 +2,11 @@ package utils;
 
 import java.util.List;
 
-public class Result {
+public class QueryBuilder {
     private final List<Parameter> paramList;
     private final List<String> label;
 
-    public Result(List<Parameter> paramList, List<String> label) {
+    public QueryBuilder(List<Parameter> paramList, List<String> label) {
         this.paramList = paramList;
         this.label = label;
     }

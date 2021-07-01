@@ -13,7 +13,7 @@ public enum QueryType {
                     }
                     GROUP BY ?retailer
                     ORDER BY ASC (?movies)""",
-            new Result(new ArrayList<>(
+            new QueryBuilder(new ArrayList<>(
                     Arrays.asList(
                             new Parameter("retailer", ParamType.RESOURCE),
                             new Parameter("movies", ParamType.LITERAL))),
@@ -30,7 +30,7 @@ public enum QueryType {
                     }
                     GROUP BY ?movie
                     ORDER BY DESC (?awards)""",
-            new Result(new ArrayList<>(
+            new QueryBuilder(new ArrayList<>(
                     Arrays.asList(
                             new Parameter("movie", ParamType.RESOURCE),
                             new Parameter("awards",ParamType.LITERAL))),
@@ -49,7 +49,7 @@ public enum QueryType {
                     ?movie me:worldwidegross ?gross.
                     }
                     ORDER BY ASC (?gross)""",
-            new Result(new ArrayList<>(
+            new QueryBuilder(new ArrayList<>(
                     Arrays.asList(
                             new Parameter("movie", ParamType.RESOURCE),
                             new Parameter("gross", ParamType.LITERAL))),
@@ -57,7 +57,7 @@ public enum QueryType {
 
     QUERY4("Budget film girati in Europa",
             """
-                    SELECT ?movie ?budget ?location
+                    SELECT ?movie ?location ?budget
                     WHERE {
                     ?movie rdf:type m:Movie.
                     ?movie me:budget ?budget.
@@ -65,22 +65,22 @@ public enum QueryType {
                     ?location rdf:type mo:Europe
                     }
                     ORDER BY ASC (?budget)""",
-            new Result(new ArrayList<>(
+            new QueryBuilder(new ArrayList<>(
                     Arrays.asList(
                             new Parameter("movie", ParamType.RESOURCE),
-                            new Parameter("budget", ParamType.LITERAL),
-                            new Parameter("location",ParamType.RESOURCE))),
-            new ArrayList<>(Arrays.asList("Movie", "Budget($)","Location"))), 3);
+                            new Parameter("location",ParamType.RESOURCE),
+                            new Parameter("budget", ParamType.LITERAL))),
+            new ArrayList<>(Arrays.asList("Movie", "Location", "Budget($)"))), 3);
 
     private final String title;
     private final String query;
-    private final Result result;
+    private final QueryBuilder queryBuilder;
     private final int numParameters;
 
-    QueryType(String title, String query, Result result, int numParameters) {
+    QueryType(String title, String query, QueryBuilder queryBuilder, int numParameters) {
         this.title = title;
         this.query = query;
-        this.result = result;
+        this.queryBuilder = queryBuilder;
         this.numParameters = numParameters;
     }
 
@@ -92,8 +92,8 @@ public enum QueryType {
         return title;
     }
 
-    public Result getResult() {
-        return result;
+    public QueryBuilder getResult() {
+        return queryBuilder;
     }
 
     public int getNumParameters() {
