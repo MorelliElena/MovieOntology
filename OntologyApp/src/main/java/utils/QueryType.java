@@ -5,13 +5,14 @@ import java.util.Arrays;
 
 public enum QueryType {
     QUERY1("Numero film per distributori online",
-            "SELECT ?retailer (COUNT(?movie) as ?movies)\n" +
-                    "WHERE {\n" +
-                    "?retailer rdf:type mo:Online_retailer.\n" +
-                    "?movie me:hasDistributor ?retailer.\n" +
-                    "}\n" +
-                    "GROUP BY ?retailer\n" +
-                    "ORDER BY ASC (?movies)",
+            """
+                    SELECT ?retailer (COUNT(?movie) as ?movies)
+                    WHERE {
+                    ?retailer rdf:type mo:Online_retailer.
+                    ?movie me:hasDistributor ?retailer.
+                    }
+                    GROUP BY ?retailer
+                    ORDER BY ASC (?movies)""",
             new Result(new ArrayList<>(
                     Arrays.asList(
                             new Parameter("retailer", ParamType.RESOURCE),
@@ -19,15 +20,16 @@ public enum QueryType {
                     new ArrayList<>(Arrays.asList("Retailer", "Movies"))), 2),
 
     QUERY2("Numero award per film girati negli USA",
-            "SELECT ?movie (COUNT(?award) as ?awards)\n" +
-                    "WHERE {\n" +
-                    "?movie rdf:type m:Movie.\n" +
-                    "?movie mo:isAwardedWith ?award.\n" +
-                    "?movie mo:hasFilmLocation ?location.\n" +
-                    "FILTER( ?location = mo:USA).\n" +
-                    "}\n" +
-                    "GROUP BY ?movie\n" +
-                    "ORDER BY DESC (?awards)",
+            """
+                    SELECT ?movie (COUNT(?award) as ?awards)
+                    WHERE {
+                    ?movie rdf:type m:Movie.
+                    ?movie mo:isAwardedWith ?award.
+                    ?movie mo:hasFilmLocation ?location.
+                    FILTER( ?location = mo:USA).
+                    }
+                    GROUP BY ?movie
+                    ORDER BY DESC (?awards)""",
             new Result(new ArrayList<>(
                     Arrays.asList(
                             new Parameter("movie", ParamType.RESOURCE),
@@ -35,17 +37,18 @@ public enum QueryType {
                     new ArrayList<>(Arrays.asList("Movie", "Awards"))), 2),
 
     QUERY3("Incassi film d'animazione usciti nel 2020",
-            "SELECT ?movie ?gross\n" +
-            "WHERE {\n" +
-            "?movie rdf:type m:Movie.\n" +
-            "?movie mo:belongsToGenre ?genre.\n" +
-            "FILTER(?genre = mo:Animation).\n" +
-            "?movie  mo:releasedate ?rdate.\n" +
-            "BIND(year(xsd:date(?rdate)) as ?year).\n" +
-            "FILTER(?year = 2020).\n" +
-            "?movie me:worldwidegross ?gross.\n" +
-            "}\n" +
-            "ORDER BY ASC (?gross)",
+            """
+                    SELECT ?movie ?gross
+                    WHERE {
+                    ?movie rdf:type m:Movie.
+                    ?movie mo:belongsToGenre ?genre.
+                    FILTER(?genre = mo:Animation).
+                    ?movie  mo:releasedate ?rdate.
+                    BIND(year(xsd:date(?rdate)) as ?year).
+                    FILTER(?year = 2020).
+                    ?movie me:worldwidegross ?gross.
+                    }
+                    ORDER BY ASC (?gross)""",
             new Result(new ArrayList<>(
                     Arrays.asList(
                             new Parameter("movie", ParamType.RESOURCE),
@@ -53,14 +56,15 @@ public enum QueryType {
                     new ArrayList<>(Arrays.asList("Movie", "Worldwide gross($)"))), 2),
 
     QUERY4("Budget film girati in Europa",
-            "SELECT ?movie ?budget ?location\n" +
-            "WHERE {\n" +
-            "?movie rdf:type m:Movie.\n" +
-            "?movie me:budget ?budget.\n" +
-            "?movie mo:hasFilmLocation ?location.\n" +
-            "?location rdf:type mo:Europe\n" +
-            "}\n" +
-            "ORDER BY ASC (?budget)",
+            """
+                    SELECT ?movie ?budget ?location
+                    WHERE {
+                    ?movie rdf:type m:Movie.
+                    ?movie me:budget ?budget.
+                    ?movie mo:hasFilmLocation ?location.
+                    ?location rdf:type mo:Europe
+                    }
+                    ORDER BY ASC (?budget)""",
             new Result(new ArrayList<>(
                     Arrays.asList(
                             new Parameter("movie", ParamType.RESOURCE),
@@ -88,11 +92,11 @@ public enum QueryType {
         return title;
     }
 
-    public int getNumParameters() {
-        return numParameters;
-    }
-
     public Result getResult() {
         return result;
+    }
+
+    public int getNumParameters() {
+        return numParameters;
     }
 }

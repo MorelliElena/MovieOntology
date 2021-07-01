@@ -13,14 +13,15 @@ import java.util.Objects;
 
 public class ModelImpl implements Observable<Record> {
     public static java.lang.String PREFIX =
-            "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
-            "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
-            "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
-            "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n"+
-            "PREFIX m: <http://www.movieontology.org/2009/11/09/>\n" +
-            "PREFIX mo: <http://www.movieontology.org/2009/10/01/movieontology.owl#>\n" +
-            "PREFIX me: <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#>\n" +
-            "PREFIX fn: <http://www.w3.org/2005/xpath-functions#>";
+            """
+                    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                    PREFIX m: <http://www.movieontology.org/2009/11/09/>
+                    PREFIX mo: <http://www.movieontology.org/2009/10/01/movieontology.owl#>
+                    PREFIX me: <http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#>
+                    PREFIX fn: <http://www.w3.org/2005/xpath-functions#>""";
 
     private final List<Observer<Record>> observerList;
     private final List<Record> recordList;
@@ -39,52 +40,32 @@ public class ModelImpl implements Observable<Record> {
 
     public void setExecution(QueryType queryType) {
         Query query = QueryFactory.create(PREFIX + queryType.getQuery());
-        try (QueryExecution qexec = QueryExecutionFactory.create(query, model)) {
-            ResultSet results = qexec.execSelect();
+        try (QueryExecution exec = QueryExecutionFactory.create(query, model)) {
+            ResultSet results = exec.execSelect();
             while (results.hasNext()) {
-               test(queryType, results);
+               getSolution(queryType, results);
                 if(resultList.size() == queryType.getNumParameters()){
                     Record record = new Record();
                     record.addParameter(resultList);
-                    System.out.println(record);
                     recordList.add(record);
                     resultList.clear();
                 }
-
-                /*QuerySolution soln = results.nextSolution();
-                Resource param1 = soln.getResource("?retailer");
-                Literal param2 = soln.getLiteral("?movies");
-                System.out.println(getResourceValue(param1) + "-->"+ param2.toString());*/
-                /*if(queryType.getNResource() + queryType.geNLiterals() > 2) {
-                    Resource param3 = soln.getResource(queryType.getResultParameter().getParam3());
-                    list.add(new Result(getResourceValue(param1), param2.getString(), getResourceValue(param3)));
-                } else {
-                    list.add(new Result(getResourceValue(param1), param2.getString()));
-                } */
             }
         } catch (Exception e){
-            System.out.println(e.getMessage());
             notifyError(e.getMessage());
         }
-        System.out.println(recordList);
         notifyObserver();
     }
 
-    private void test (QueryType queryType, ResultSet results){
-        QuerySolution soln = results.nextSolution();
+    private void getSolution(QueryType queryType, ResultSet results){
+        QuerySolution querySolution = results.nextSolution();
         for(Parameter p: queryType.getResult().getParamList()){
             if(p.getType() == ParamType.RESOURCE){
-                //System.out.println(soln.getResource(p.getParam()).toString());
-                resultList.add(getResourceValue(soln.getResource(p.getParam())));
+                resultList.add(getResourceValue(querySolution.getResource(p.getParam())));
             } else if(p.getType() == ParamType.LITERAL){
-                //System.out.println(soln.getLiteral(p.getParam()).getString());
-                resultList.add(soln.getLiteral(p.getParam()).getString());
+                resultList.add(querySolution.getLiteral(p.getParam()).getString());
             }
-
-            //System.out.println(resultList);
-
         }
-
     }
 
     private static String getResourceValue(Resource value){

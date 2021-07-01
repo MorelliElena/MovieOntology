@@ -11,14 +11,6 @@ public class Result {
         this.label = label;
     }
 
-    public void addParameter(List<Parameter> list){
-        this.paramList.addAll(list);
-    }
-
-    public void addParameter(Parameter param){
-        this.paramList.add(param);
-    }
-
     public List<Parameter> getParamList() {
         return paramList;
     }

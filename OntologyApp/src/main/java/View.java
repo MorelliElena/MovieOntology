@@ -24,8 +24,11 @@ public class View extends JFrame implements Observer<Record> {
     private static final String JBUTTON_LABEL = "Query selezionabili:";
     private static final String SUBMIT_BUTTON = "OK";
     private final Controller controller;
-    private final JRadioButton query2, query1, query3, query4;
-    private JTextArea textArea;
+    private final JRadioButton query2;
+    private final JRadioButton query1;
+    private final JRadioButton query3;
+    private final JRadioButton query4;
+    private final JTextArea textArea;
     final JPanel visualArea;
 
     public View(final Controller controller) {
@@ -94,30 +97,17 @@ public class View extends JFrame implements Observer<Record> {
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
     private void startSimulation() {
-        QueryType queryType;
-        if (query1.isSelected()) {
-            queryType = QueryType.QUERY1;
-        } else if (query2.isSelected()) {
+        QueryType queryType =  QueryType.QUERY1;
+        if (query2.isSelected()) {
             queryType = QueryType.QUERY2;
         } else if (query3.isSelected()) {
             queryType = QueryType.QUERY3;
-        } else {
+        } else if (query4.isSelected()){
             queryType = QueryType.QUERY4;
         }
-        this.textArea.setText("");
-        textArea.setColumns(queryType.getNumParameters());
-        textArea.setTabSize(20);
-        String str = null;
-        for (String s: queryType.getResult().getLabel()) {
-            if(str != null){
-                str = str + "\t" + s;
-            } else {
-                str = s;
-            }
-        }
-        this.textArea.setText(str + "\n");
-
+        setLabelInTextArea(queryType);
         this.controller.startSimulation(queryType);
     }
 
@@ -134,5 +124,20 @@ public class View extends JFrame implements Observer<Record> {
     @Override
     public void notifyError(String error) {
 
+    }
+
+    private void setLabelInTextArea(QueryType queryType){
+        this.textArea.setText("");
+        textArea.setColumns(queryType.getNumParameters());
+        textArea.setTabSize(20);
+        StringBuilder str = null;
+        for (String s: queryType.getResult().getLabel()) {
+            if(str != null){
+                str.append("\t").append(s);
+            } else {
+                str = new StringBuilder(s);
+            }
+        }
+        this.textArea.setText(str + "\n");
     }
 }

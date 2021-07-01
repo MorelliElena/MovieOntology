@@ -10,32 +10,20 @@ public class Record {
         this.resultList = new ArrayList<>();
     }
 
-    public Record(List<String> paramList) {
-        this.resultList = paramList;
-    }
-
     public void addParameter(List<String> list) {
         this.resultList.addAll(list);
     }
 
-    public void addParameter(String param) {
-        this.resultList.add(param);
-    }
-
-    public List<String> getParamList() {
-        return resultList;
-    }
-
-   @Override
+    @Override
    public String toString() {
-       String str = null;
+       StringBuilder str = null;
        for (String s: resultList) {
            if(str != null){
-               str =  str + "\t" + s;
+               str.append("\t").append(s);
            } else {
-               str = s;
+               str = new StringBuilder(s);
            }
        }
-        return str +'\n';
+        return str != null ? str.toString() +'\n' : "";
    }
 }
