@@ -40,10 +40,6 @@ movieontology:hasActress rdfs:range <http://dbpedia.org/ontology/Actor> .
 movieontology:hasMaleActor rdfs:range <http://dbpedia.org/ontology/Actor> .
 
 
-###  http://www.movieontology.org/2009/10/01/movieontology.owl#hasTranslatedMovie
-movieontology:hasTranslatedMovie rdfs:domain movieontology:Presentation .
-
-
 ###  http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn
 movieontology:isActressIn rdfs:domain <http://dbpedia.org/ontology/Actor> ;
                           rdfs:range <http://www.movieontology.org/2009/11/09/Movie> .

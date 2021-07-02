@@ -71,14 +71,6 @@
     
 
 
-    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#hasTranslatedMovie -->
-
-    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#hasTranslatedMovie">
-        <rdfs:domain rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Presentation"/>
-    </rdf:Description>
-    
-
-
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#isActressIn">
