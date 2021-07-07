@@ -1466,6 +1466,46 @@
     
 
 
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Estonia -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Estonia">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Europe"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Iceland -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Iceland">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Europe"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Ireland -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Ireland">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Europe"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Italy -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Italy">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Europe"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Malta -->
+
+    <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Malta">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Europe"/>
+    </rdf:Description>
+    
+
+
     <!-- http://www.movieontology.org/2009/10/01/movieontology.owl#Netflix.com_retailer -->
 
     <rdf:Description rdf:about="http://www.movieontology.org/2009/10/01/movieontology.owl#Netflix.com_retailer">
@@ -1764,6 +1804,7 @@
     <!-- http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Disney+.com_retailer -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Disney+.com_retailer">
+        <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Europe"/>
         <rdf:type rdf:resource="http://www.movieontology.org/2009/10/01/movieontology.owl#Online_retailer"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/elenamorelli/ontologies/2021/5/movie_ontology#Distribution_Company"/>
     </owl:NamedIndividual>
