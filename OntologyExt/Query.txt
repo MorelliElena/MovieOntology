@@ -2,7 +2,7 @@ Movie(?m) ^ worldwidegross(?m, ?g) ^ budget (?m,?b)^swrlb:subtract(?g,?b,?r) -> 
 
 Movie(?m1) ^ movieontology:imdbrating(?m1, ?r1) ^ swrlb:greaterThan(?r1, 8.0) -> ishighrating(?m1, true)
 
-Movie(?m) ^ movieontology:isAwardedWith(?m, ?a) -> movieontology:nominatedFor(?m, ?a)
+movieontology:hasActor(?m, ?a) ^ isPartOfSerie(?m, ?s) -> isActorInSerie(?a, ?s)
 
 PREFIX m: <http://www.movieontology.org/2009/11/09/>
 PREFIX mo: <http://www.movieontology.org/2009/10/01/movieontology.owl#>
